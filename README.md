@@ -78,6 +78,39 @@ import 'package:woodpecker/woodpecker.dart';
 Logger.setupLogger(DebugLogger());
 ```
 
+Then you are ready to log anything using one of the availables log levels
+
+- Debug
+
+```dart
+Logger.d("This is a debug message");
+```
+
+- Info
+
+```dart
+Logger.i("This is an info message");
+```
+
+- Warning
+
+```dart
+Logger.w("This is a warning message");
+```
+
+- Error
+  Error accepts an optional exception
+
+```dart
+Logger.e("This is an error message", exception: e);
+```
+
+- WTF
+
+```dart
+Logger.wtf("This is a WTF message");
+```
+
 ### DebugLogger
 
 The library includes a `Debug Logger` that prints the information in the console.
@@ -87,6 +120,8 @@ The logs are colourized, and it supports 2 modes
 ```dart
 DebugLogger(style = DebugLoggerStyle.colorText)
 ```
+
+or
 
 ```dart
 DebugLogger(style = DebugLoggerStyle.backgroundColor)
