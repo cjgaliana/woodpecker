@@ -12,7 +12,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/cjgaliana/woodpecker">
-    <img src="images/woodpecker_logo.svg" alt="Logo" width="80" height="80">
+    <img src="images/woodpecker_logo.svg" alt="Logo" width="100" height="100">
   </a>
 
   <h3 align="center">Woodpecker</h3>
@@ -31,7 +31,15 @@
 
 ## About The Project
 
-Intro
+This is a logger with a small, extensible API which provides utility on top of Flutter's normal `print` class.
+
+Behavior is added through Tree instances. You can install an instance by calling Timber.plant. Installation of Trees should be done as early as possible. The onCreate of your application is the most logical choice.
+
+You should configure the logger as soon as possible in your app. Maybe in `main.dart` in a good place.
+
+You can have as many logger as you want in your app and the library will log the messages in all of the clients.
+
+Just remember to don't log anything in production!
 
 ## Getting Started
 
@@ -84,7 +92,9 @@ DebugLogger(style = DebugLoggerStyle.colorText)
 DebugLogger(style = DebugLoggerStyle.backgroundColor)
 ```
 
-<!-- ROADMAP -->
+## Creating a new logger
+
+Just create a new class that implements `LoggerClient` interface.
 
 ## Roadmap
 
@@ -130,8 +140,6 @@ Logo by: https://freesvg.org/red-woodpecker
 Camilo Galiana - [@cjgaliana](https://twitter.com/cjgaliana)
 
 Project Link: [https://github.com/cjgaliana/woodpecker](https://github.com/cjgaliana/woodpecker)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
